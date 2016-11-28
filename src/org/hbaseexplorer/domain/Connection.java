@@ -52,6 +52,8 @@ public class Connection implements Serializable {
         }
         catch(MasterNotRunningException me) {
             throw new ExplorerException("Cannot connect to cluster");
+        }catch(IOException e){
+        	e.printStackTrace();
         }
     }
 
